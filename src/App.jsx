@@ -8,6 +8,12 @@ function App() {
 
   return (
    <div>
+    <BrowserRouter basename="/jenkinsviteappdemo">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
       <h1> CICD JENKINS DEMO</h1>
       <p>
         jenkins source code uses git repo and set branch /main  
