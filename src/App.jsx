@@ -1,40 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-   <div>
-    <BrowserRouter basename="/jenkinsviteappdemo">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
-      <h1> CICD JENKINS DEMO</h1>
-      <p>
-        jenkins source code uses git repo and set branch /main  
-        poll scm triggers option * * * * *  
-        build step add build step <b>Windows batch command</b>  
-        <u>call npm install</u>  
-        <u>call npm run dev</u>  
-        rmdir "C:\......tomcat9\webapps\jenkinsfrontdemo"  
-        mkdir "C:\......tomcat9\webapps\jenkinsfrontdemo"  
-        xcopy path
-      </p>
+    <div>
+      <BrowserRouter basename="/jenkinsviteappdemo">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
 
-      <div>
-        <p>
-          build step add build step <b>Windows batch command</b>  
-          stop tomcat 9  
-          start tomcat 9
-        </p>
-      </div>
-    </div> 
-  )
+      <h1>CICD JENKINS DEMO</h1>
+      <p>
+        This is a demo React + Vite app deployed with Jenkins & Tomcat.
+      </p>
+    </div>
+  );
 }
 
-export default App
+export default App;
